@@ -1,0 +1,16 @@
+{% extends 'otree/Page.html' %}
+{% load otree static %}
+
+{% block title %}
+    Market Game: Pricing Decision
+{% endblock %}
+
+{% block content %}
+    {% formfields %}
+
+    <p>
+        To confirm your choice, click the Next button.
+    </p>
+
+    {% next_button %}
+{% endblock %}

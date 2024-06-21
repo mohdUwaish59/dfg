@@ -1,0 +1,54 @@
+{% extends 'otree/Page.html' %}
+{% load otree static %}
+
+{{ chat nickname=player.nickname }}
+
+{% block title %}
+    Agree on a Price
+{% endblock %}
+
+{% block content %}
+    <p>
+        You are the manager of {{ player.nickname }} and your task is to agree on a sales price for a common product with two other firms.
+    </p>
+
+    <br><br>
+
+    <table style="table-layout: fixed; width: 100%">
+        <!-- Firm row -->
+        <tr>
+            <th></th>
+            {{ for player in group.get_players }}
+                <th> {{ player.nickname }} </th>
+            {{ endfor }}
+        </tr>
+
+        <!-- Gender row -->
+        <tr>
+            <th>Gender</th>
+            {{ for player in group.get_players }}
+                <td> {{ player.participant.gender }} </td>
+            {{ endfor }}
+        </tr>
+
+        <!-- Age row -->
+        <tr>
+            <th>Age</th>
+            {{ for player in group.get_players }}
+                <td> {{ player.participant.age }} </td>
+            {{ endfor }}
+        </tr>
+
+        <!-- Education row -->
+        <tr>
+            <th>Education</th>
+            {{ for player in group.get_players }}
+                <td> {{ player.participant.education }} </td>
+            {{ endfor }}
+        </tr>
+    </table>
+
+    <br><br>
+
+    {% formfields %}
+{% endblock %}

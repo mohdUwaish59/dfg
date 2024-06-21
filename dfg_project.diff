@@ -1,0 +1,1193 @@
+diff --git a/introduction/CommunicationStage.html b/introduction/CommunicationStage.html
+new file mode 100644
+index 0000000..b037193
+--- /dev/null
++++ b/introduction/CommunicationStage.html
+@@ -0,0 +1,21 @@
++{% extends 'otree/Page.html' %}
++{% load otree static %}
++
++{% block title %}
++    Communication Stage
++{% endblock %}
++
++{% block content %}
++
++    <ul>
++        <li>In each period, before you make your pricing decisions you can communicate with the other two firms. Therefore, we provide you with a chat box.</li>
++        <li>You are allowed to post how many messages you like. There are only two restrictions:
++            <ol type="1">
++                <li>You may not post messages that identify yourself (e.g. age, gender, race, etc.)
++                <li>You may not use offensive language.</li>
++            </ol>
++        <li>The chat is open for 1 minute. After that time, the chat will close and you automatically move to the screen where you can set your price.</li>
++    </ul>
++
++    {% next_button %}
++{% endblock %}
+diff --git a/introduction/ComprehensionQuestionsSet1.html b/introduction/ComprehensionQuestionsSet1.html
+new file mode 100644
+index 0000000..dc18d2e
+--- /dev/null
++++ b/introduction/ComprehensionQuestionsSet1.html
+@@ -0,0 +1,29 @@
++{% extends 'otree/Page.html' %}
++{% load otree static %}
++
++{% block title %}
++    Comprehension Questions Set 1
++{% endblock %}
++
++{% block content %}
++
++    <table>
++        <tr>
++            <td style="vertical-align: top">Suppose:</td>
++            <td style="padding-left: 1em">
++                Firm&nbsp;A chooses a price of 85&nbsp;ECU<br>
++                Firm&nbsp;B chooses a price of 75&nbsp;ECU<br>
++                Firm&nbsp;C chooses a price of 78&nbsp;ECU
++            </td>
++        </tr>
++    </table>
++
++    <br/>
++
++    {{ formfields }}
++
++    <br/>
++
++    {{ next_button }}
++
++{% endblock %}
+diff --git a/introduction/ComprehensionQuestionsSet2.html b/introduction/ComprehensionQuestionsSet2.html
+new file mode 100644
+index 0000000..373ef4e
+--- /dev/null
++++ b/introduction/ComprehensionQuestionsSet2.html
+@@ -0,0 +1,29 @@
++{% extends 'otree/Page.html' %}
++{% load otree static %}
++
++{% block title %}
++    Comprehension Questions Set 2
++{% endblock %}
++
++{% block content %}
++
++    <table>
++        <tr>
++            <td style="vertical-align: top">Suppose:</td>
++            <td style="padding-left: 1em">
++                Firm&nbsp;A chooses a price of 70&nbsp;ECU<br>
++                Firm&nbsp;B chooses a price of 70&nbsp;ECU<br>
++                Firm&nbsp;C chooses a price of 70&nbsp;ECU
++            </td>
++        </tr>
++    </table>
++
++    <br/>
++
++    {{ formfields }}
++
++    <br/>
++
++    {{ next_button }}
++
++{% endblock %}
+diff --git a/introduction/GeneralSetting.html b/introduction/GeneralSetting.html
+new file mode 100644
+index 0000000..51882a4
+--- /dev/null
++++ b/introduction/GeneralSetting.html
+@@ -0,0 +1,19 @@
++{% extends 'otree/Page.html' %}
++{% load otree static %}
++
++{% block title %}
++    General Setting
++{% endblock %}
++
++{% block content %}
++
++    <p>
++        In the experiment, you are one of three firms (A,&nbsp;B,&nbsp;C) in a market.
++        You will be in the <b>same market</b> with the <b>same firms</b> all the time.
++        You can earn Experimental Currency Units (ECU).
++        At the end, the money will be converted at an exchange rate: <b>1200&nbsp;ECU&nbsp;=&nbsp;£1.</b>
++    </p>
++
++    {% next_button %}
++
++{% endblock %}
+diff --git a/introduction/HowToEarnMoney.html b/introduction/HowToEarnMoney.html
+new file mode 100644
+index 0000000..0db8bbe
+--- /dev/null
++++ b/introduction/HowToEarnMoney.html
+@@ -0,0 +1,23 @@
++{% extends 'otree/Page.html' %}
++{% load otree static %}
++
++{% block title %}
++    How you can earn money
++{% endblock %}
++
++{% block content %}
++
++    <ul>
++    <li>In each period, firms set a price <b>(0-100 ECU)</b> for the sale of goods to six consumers.</li>
++    <li>The firm that sets the lowest price sets the market price and serves all consumers.<br>
++        The profit is: <b>market price</b>&nbsp;&times;&nbsp;<b>number of consumers</b> served.</li>
++    <li>The other firms that have chosen a higher price do not make any money.</li>
++    <li>If more than one firm set the lowest price, they divide the consumers among themselves.</li>
++    <li>The <b>consumers</b> are <b>other participants</b> of the experiment. In every period, they each receive an endowment of 100&nbsp;ECU and have to buy one good at the market price.<br>
++        Thus, setting <b>higher market prices</b> lowers the <b>payoffs</b> of the <b>consumers</b>. 
++    <li>After each period, firms learn the price choices and profits of all firms, and consumer expenditures.</li>
++    <li>The <b>experiment consists of at least 20 periods.</b> After period 20, the outcome of a virtual 6-sided dice decides about the termination of the experiment. The experiment will only continue, if the dice roll was not a 6.
++    </ul>
++
++    {% next_button %}
++{% endblock %}
+diff --git a/introduction/InfoPage.html b/introduction/InfoPage.html
+new file mode 100644
+index 0000000..213aee9
+--- /dev/null
++++ b/introduction/InfoPage.html
+@@ -0,0 +1,17 @@
++{% extends 'otree/Page.html' %}
++{% load otree static %}
++
++{% block title %}
++    Before we start with the main experiment
++{% endblock %}
++
++{% block content %}
++
++    <p>
++    We ask you to complete a short survey. In the course of the experiment, this information may be transmitted to another participant.
++    </p>
++
++    {% formfields %}
++    {% next_button %}
++
++{% endblock %}
+diff --git a/introduction/WelcomePage.html b/introduction/WelcomePage.html
+new file mode 100644
+index 0000000..b0ee9de
+--- /dev/null
++++ b/introduction/WelcomePage.html
+@@ -0,0 +1,27 @@
++{% extends 'otree/Page.html' %}
++{% load otree static %}
++
++{% block title %}
++    Welcome
++{% endblock %}
++
++{% block content %}
++
++    <p>
++    This HIT is an academic experiment on economic decision-making. Completing the entire experiment should not take more than a few minutes. The reward for participation is £1. A large share will be paid as a bonus payment, which depends on your decisions. Participation is voluntary; withdrawal forfeits payment. To avoid waiting times during the experiment, we will pay the bonuses in a few days once everybody has completed the experiment.
++    </p>
++
++    <h2>Information on data processing</h2>
++
++    <p>
++    The data collected for scientific purposes are anonymous and kept separate from any identifying information, ensuring privacy and confidentiality throughout the study. The University of Göttingen researchers process the data. Study results are published in scientific journals with statistical summaries that safeguard privacy. 
++    </p>
++
++    {% formfields %}
++
++    <p>
++    If you prefer not to take part, please close the browser tab.
++    </p>
++
++    {% next_button %}
++{% endblock %}
+diff --git a/introduction/__init__.py b/introduction/__init__.py
+new file mode 100644
+index 0000000..ec0cf43
+--- /dev/null
++++ b/introduction/__init__.py
+@@ -0,0 +1,200 @@
++from otree.api import (
++    models,
++    widgets,
++    BaseConstants,
++    BaseSubsession,
++    BaseGroup,
++    BasePlayer,
++    Currency as c,
++    currency_range,
++    Page,  # Add this import
++    WaitPage,  # Add this import
++)
++
++author = 'Your Name'
++
++doc = """
++Your experiment description
++"""
++
++class Constants(BaseConstants):
++    name_in_url = 'introduction'
++    players_per_group = 3
++    num_rounds = 1
++
++class Subsession(BaseSubsession):
++    pass
++
++class Group(BaseGroup):
++    pass
++
++class Player(BasePlayer):
++    consent = models.BooleanField(initial=False,
++        label='I have no further questions and hereby consent to the data processing, the confidentiality and participation in the study.')
++    gender = models.StringField(
++        choices=['Male', 'Female', 'Diverse'],
++        label='How do you see your own gender?',
++        widget=widgets.RadioSelect,
++    )
++    age = models.IntegerField(label='Your age:')
++    education = models.StringField(
++        choices=['High school', 'Bachelor', 'Master', 'PhD'],
++        label='Your highest educational qualification:',
++        widget=widgets.RadioSelect,
++    )
++    comprehension1_which_firm = models.IntegerField(
++        label="Which firm will set the market price?",
++        choices=[
++            [1, "Firm A"],
++            [2, "Firm B"],
++            [3, "Firm C"]
++        ],
++        widget=widgets.RadioSelect,
++    )
++    comprehension1_profit_firm_a = models.IntegerField(
++        label="What is the profit of Firm A?",
++        choices=[
++            [0,   "0 ECU"],
++            [85,  "85 ECU"],
++            [510, "510 ECU"]
++        ],
++        widget=widgets.RadioSelect,
++    )
++    comprehension1_consumer_expenditures = models.IntegerField(
++        label="What are the expenditures of the consumers?",
++        choices=[
++            [0,  "All consumers lose 0 ECU"],
++            [50, "Each consumer is deducted 50 ECU, thus all six consumers lose 300 ECU"],
++            [75, "Each consumer is deducted 75 ECU, thus all six consumers lose 450 ECU"]
++        ],
++        widget=widgets.RadioSelect,
++    )
++    comprehension2_profit_firm_a = models.IntegerField(
++        label="What is the profit of Firm A?",
++        choices=[
++            [0,   "0 ECU"],
++            [70,  "70 ECU"],
++            [140, "140 ECU"]
++        ],
++        widget=widgets.RadioSelect,
++    )
++    comprehension2_profit_firm_c = models.IntegerField(
++        label="What is the profit of Firm C?",
++        choices=[
++            [0,   "0 ECU"],
++            [70,  "70 ECU"],
++            [140, "140 ECU"]
++        ],
++        widget=widgets.RadioSelect,
++    )
++    comprehension2_consumer_expenditures = models.IntegerField(
++        label="What are the expenditures of the consumers?",
++        choices=[
++            [0,  "All consumers lose 0 ECU"],
++            [70, "Each consumer is deducted 70 ECU, thus all six consumers lose 420 ECU"],
++            [35, "Each consumer is deducted 35 ECU, thus all six consumers lose 216 ECU"]
++        ],
++        widget=widgets.RadioSelect,
++    )
++
++class WelcomePage(Page):
++    form_model = 'player'
++    form_fields = ['consent']
++
++    @staticmethod
++    def error_message(player, values):
++        if values['consent'] == False:
++            return 'You must answer "yes" to the consent question to be able to participate'
++
++class InfoPage(Page):
++    form_model = 'player'
++    form_fields = ['gender', 'age', 'education']
++
++    @staticmethod
++    def before_next_page(player, timeout_happened):
++        player.participant.gender = player.gender
++        player.participant.age = player.age
++        player.participant.education = player.education
++
++class GeneralSetting(Page):
++    pass
++
++class HowToEarnMoney(Page):
++    pass
++
++class CommunicationStage(Page):
++    pass
++
++class ComprehensionQuestions1(Page):
++    form_model = 'player'
++    form_fields = ['comprehension1_which_firm']
++    template_name = 'introduction/ComprehensionQuestionsSet1.html'
++
++    @staticmethod
++    def error_message(player, values):
++        if values['comprehension1_which_firm'] != 2:
++            return 'The answer was wrong. Note, Firm B will set the market price, as it has chosen the lowest price.'
++
++class ComprehensionQuestions2(Page):
++    form_model = 'player'
++    form_fields = ['comprehension1_profit_firm_a']
++    template_name = 'introduction/ComprehensionQuestionsSet1.html'
++
++    @staticmethod
++    def error_message(player, values):
++        if values['comprehension1_profit_firm_a'] != 0:
++            return 'The answer was wrong. Since Firm A has not set the lowest price, it will earn 0 ECU.'
++
++class ComprehensionQuestions3(Page):
++    form_model = 'player'
++    form_fields = ['comprehension1_consumer_expenditures']
++    template_name = 'introduction/ComprehensionQuestionsSet1.html'
++
++    @staticmethod
++    def error_message(player, values):
++        if values['comprehension1_consumer_expenditures'] != 75:
++            return 'The answer was wrong. Each consumer is deducted 75 ECU, leading to a total loss of 450 ECU for the group of six consumers.'
++
++class ComprehensionQuestions4(Page):
++    form_model = 'player'
++    form_fields = ['comprehension2_profit_firm_a']
++    template_name = 'introduction/ComprehensionQuestionsSet2.html'
++
++    @staticmethod
++    def error_message(player, values):
++        if values['comprehension2_profit_firm_a'] != 140:
++            return 'The answer was wrong. Since all three firms set the same price, they share the six consumers equally. Thus, each firm serves two consumers at a market price of 70 ECU. Firm A will earn 2 &times; 70 ECU = 140 ECU.'
++
++class ComprehensionQuestions5(Page):
++    form_model = 'player'
++    form_fields = ['comprehension2_profit_firm_c']
++    template_name = 'introduction/ComprehensionQuestionsSet2.html'
++
++    @staticmethod
++    def error_message(player, values):
++        if values['comprehension2_profit_firm_c'] != 140:
++            return 'The answer was wrong. Since all three firms set the same price, they share the six consumers equally. Thus, each firm serves two consumers at a market price of 70 ECU. Firm C will earn 2 &times; 70 ECU = 140 ECU.'
++
++class ComprehensionQuestions6(Page):
++    form_model = 'player'
++    form_fields = ['comprehension2_consumer_expenditures']
++    template_name = 'introduction/ComprehensionQuestionsSet2.html'
++
++    @staticmethod
++    def error_message(player, values):
++        if values['comprehension2_consumer_expenditures'] != 70:
++            return 'The answer was wrong. Each consumer is deducted 70 ECU, leading to a total loss of 420 ECU for the group of six consumers'
++
++page_sequence = [
++    WelcomePage,
++    InfoPage,
++    GeneralSetting,
++    HowToEarnMoney,
++    CommunicationStage,
++    ComprehensionQuestions1,
++    ComprehensionQuestions2,
++    ComprehensionQuestions3,
++    ComprehensionQuestions4,
++    ComprehensionQuestions5,
++    ComprehensionQuestions6,
++]
+diff --git a/my_app/Chat.html b/my_app/Chat.html
+new file mode 100644
+index 0000000..5a091ab
+--- /dev/null
++++ b/my_app/Chat.html
+@@ -0,0 +1,54 @@
++{% extends 'otree/Page.html' %}
++{% load otree static %}
++
++{{ chat nickname=player.nickname }}
++
++{% block title %}
++    Agree on a Price
++{% endblock %}
++
++{% block content %}
++    <p>
++        You are the manager of {{ player.nickname }} and your task is to agree on a sales price for a common product with two other firms.
++    </p>
++
++    <br><br>
++
++    <table style="table-layout: fixed; width: 100%">
++        <!-- Firm row -->
++        <tr>
++            <th></th>
++            {{ for player in group.get_players }}
++                <th> {{ player.nickname }} </th>
++            {{ endfor }}
++        </tr>
++
++        <!-- Gender row -->
++        <tr>
++            <th>Gender</th>
++            {{ for player in group.get_players }}
++                <td> {{ player.participant.gender }} </td>
++            {{ endfor }}
++        </tr>
++
++        <!-- Age row -->
++        <tr>
++            <th>Age</th>
++            {{ for player in group.get_players }}
++                <td> {{ player.participant.age }} </td>
++            {{ endfor }}
++        </tr>
++
++        <!-- Education row -->
++        <tr>
++            <th>Education</th>
++            {{ for player in group.get_players }}
++                <td> {{ player.participant.education }} </td>
++            {{ endfor }}
++        </tr>
++    </table>
++
++    <br><br>
++
++    {% formfields %}
++{% endblock %}
+diff --git a/my_app/FinalPage.html b/my_app/FinalPage.html
+index bc7a301..4f86a38 100644
+--- a/my_app/FinalPage.html
++++ b/my_app/FinalPage.html
+@@ -2,11 +2,28 @@
+ {% load otree static %}
+ 
+ {% block title %}
+-    Final Results
++    Summary of the Payoffs
+ {% endblock %}
+ 
+ {% block content %}
+-    <p>The experiment has ended.</p>
+-    <p>Your total profit: {{ total_profit }}</p>
+-    <p>Total consumer earnings: {{ total_consumer_earnings }}</p>
+-{% endblock %}
+\ No newline at end of file
++
++    <table>
++        <tr>
++            <td>Your total earnings:</td>
++            <td style="padding-left: 1em">{{ payoff }} ECU</td>
++        </tr>
++        <tr>
++            <td>Your earnings in pounds:</td>
++            <td style="padding-left: 1em">{{ payoff_in_real_world_currency }}</td>
++        </tr>
++        <tr>
++            <td>Total earnings including show-up fee:</td>
++            <td style="padding-left: 1em">{{ participant.payoff_plus_participation_fee }}</td>
++        </tr>
++    </table>
++
++    <br/><br/>
++
++    {{ next_button }}
++
++{% endblock %}
+diff --git a/my_app/InfoPage.html b/my_app/InfoPage.html
+deleted file mode 100644
+index ee4ae67..0000000
+--- a/my_app/InfoPage.html
++++ /dev/null
+@@ -1,13 +0,0 @@
+-{% extends 'otree/Page.html' %}
+-{% load otree static %}
+-
+-{% block title %}
+-    Participant Information
+-{% endblock %}
+-
+-{% block content %}
+-    <p>Before we start with the main experiment, we ask you to complete a short three-question survey. In the course of the experiment, this information may be transmitted anonymously to another participant.</p>
+-
+-    {% formfields %}
+-        {% next_button %}
+-{% endblock %}
+\ No newline at end of file
+diff --git a/my_app/PriceSetting.html b/my_app/PriceSetting.html
+index 4723cd8..1dc9ad9 100644
+--- a/my_app/PriceSetting.html
++++ b/my_app/PriceSetting.html
+@@ -1,15 +1,16 @@
+ {% extends 'otree/Page.html' %}
+ {% load otree static %}
+ 
+-{{ chat }}
+-
+ {% block title %}
+-    Set Your Price
++    Market Game: Pricing Decision
+ {% endblock %}
+ 
+ {% block content %}
+-    <p>You are in the role of a firm in a market with two other firms. Please set your selling price between 0 and 100.</p>
+-
+     {% formfields %}
+-        {% next_button %}
+-{% endblock %}
+\ No newline at end of file
++
++    <p>
++        To confirm your choice, click the Next button.
++    </p>
++
++    {% next_button %}
++{% endblock %}
+diff --git a/my_app/ResultsPage.html b/my_app/ResultsPage.html
+index 885bd77..a10c5c2 100644
+--- a/my_app/ResultsPage.html
++++ b/my_app/ResultsPage.html
+@@ -2,19 +2,23 @@
+ {% load otree static %}
+ 
+ {% block title %}
+-    Market Results
++    Market Game: Payoff Information
+ {% endblock %}
+ 
+ {% block content %}
+-    <p>The prices set by the firms in your market:</p>
++    <p>Summary of period {{ player.round_number }}</p>
++
+     <ul>
+         {% for player in group.get_players %}
+-            <li>Firm {{ player.id_in_group }}: {{ player.price }}</li>
++            <li>{{ player.nickname }}'s price: {{ player.price }}</li>
+         {% endfor %}
+     </ul>
+ 
+-    <p>Your profit: {{ player.profit }}</p>
+-    <p>Total consumer earnings: {{ total_consumer_earnings }}</p>
++    <p>Your ({{player.nickname}}'s) earnings: {{ earnings }} ECU</p>
++    <p>Each consumer is subtracted: <span style="color: red"> {{ each_consumer_subtracted }} ECU </p>
++    <p>The group of consumers is subtracted: <span style="color: red"> {{ group_consumers_subtracted }} ECU</p>
++
++    <br/>
+ 
+     {% next_button %}
+-{% endblock %}
+\ No newline at end of file
++{% endblock %}
+diff --git a/my_app/__init__.py b/my_app/__init__.py
+index fc78ea8..36b4c83 100644
+--- a/my_app/__init__.py
++++ b/my_app/__init__.py
+@@ -20,7 +20,7 @@ Your experiment description
+ class Constants(BaseConstants):
+     name_in_url = 'my_app'
+     players_per_group = 3
+-    num_rounds = 1
++    num_rounds = 3
+     num_consumers = 6
+     consumer_endowment = c(100)
+     exchange_rate = 1500
+@@ -32,62 +32,34 @@ class Group(BaseGroup):
+     pass
+ 
+ class Player(BasePlayer):
+-    gender = models.StringField(
+-        choices=['Male', 'Female', 'Diverse'],
+-        label='How do you see your own gender?',
+-        widget=widgets.RadioSelect,
+-    )
+-    age = models.IntegerField(label='Your age:')
+-    semester = models.IntegerField(label='Your semester number:')
+     price = models.IntegerField(initial=0,
+-        label='Set your price (between 0 and 100):',
++        label='What price (0-100) will you choose in this period?',
+         min=0,
+         max=100,
+         blank=True
+     )
+     profit = models.CurrencyField(initial=c(0))
++    total_profit = models.CurrencyField(initial=c(0))
+     consumer_earnings = models.CurrencyField()
+-
+-class InfoPage(Page):
+-    form_model = 'player'
+-    form_fields = ['gender', 'age', 'semester']
++    nickname = models.StringField()
+ 
+ class WaitForGrouping(WaitPage):
+     group_by_arrival_time = True
+ 
+-class PriceSetting(Page):
+-    form_model = 'player'
+-    form_fields = ['price']
+-    
+-
+-'''class ResultsWaitPage(WaitPage):
+-    after_all_players_arrive = 'set_profits'
+-
+     @staticmethod
+-    def set_profits(subsession):
+-        for group in subsession.get_groups():
+-            prices = [p.price for p in group.get_players()]
+-            min_price = min(prices)
+-            firms_with_min_price = [
+-                p for p in group.get_players() if p.price == min_price
+-            ]
+-            num_firms_with_min_price = len(firms_with_min_price)
++    def after_all_players_arrive(group: Group):
++        for player in group.get_players():
++            player.nickname = 'Firm ' + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[player.id_in_group - 1]
+ 
+-            consumers_per_firm = Constants.num_consumers // num_firms_with_min_price
+-            remaining_consumers = Constants.num_consumers % num_firms_with_min_price
++class Chat(Page):
++    timeout_seconds = 60
+ 
+-            for player in group.get_players():
+-                if player.price == min_price:
+-                    player.profit = min_price * (consumers_per_firm + (1 if remaining_consumers else 0))
+-                    remaining_consumers -= 1
+-                else:
+-                    player.profit = c(0)
++class PriceSetting(Page):
++    form_model = 'player'
++    form_fields = ['price']
+ 
+-                player.consumer_earnings = (
+-                    Constants.num_consumers * (Constants.consumer_endowment - min_price)
+-                )'''
+-                
+ class ResultsWaitPage(WaitPage):
++    body_text = "Please wait until all other firms in your market have reached their decisions."
+     after_all_players_arrive = 'set_profits'
+ 
+     @staticmethod
+@@ -109,6 +81,8 @@ class ResultsWaitPage(WaitPage):
+                 else:
+                     player.profit = c(0)
+ 
++                player.payoff += player.profit
++
+                 player.consumer_earnings = (
+                     Constants.num_consumers * (Constants.consumer_endowment - min_price)
+                 )
+@@ -116,14 +90,13 @@ class ResultsWaitPage(WaitPage):
+     def after_all_players_arrive(self):
+         self.set_profits(self.subsession)
+ 
+-
+-
+-
+ class ResultsPage(Page):
+     def vars_for_template(self):
++        lowest_price = min([p.price for p in self.group.get_players()])
+         return {
+-            'total_profit': sum([p.profit for p in self.group.get_players()]),
+-            'total_consumer_earnings': sum([p.consumer_earnings for p in self.group.get_players()]),
++            'earnings': int(self.profit),
++            'each_consumer_subtracted': -lowest_price,
++            'group_consumers_subtracted': -(lowest_price * Constants.num_consumers)
+         }
+ 
+ class FinalPage(Page):
+@@ -132,20 +105,16 @@ class FinalPage(Page):
+ 
+     def vars_for_template(self):
+         players = self.group.get_players()
+-        total_profit = sum([p.profit for p in players])
+-        total_consumer_earnings = sum([sum(p.consumer_earnings for p in player.in_all_rounds()) for player in players])
+         return {
+-        'total_profit': total_profit,
+-        'total_consumer_earnings': total_consumer_earnings,
+-    }
+-
+-
++            'payoff': int(self.payoff),
++            'payoff_in_real_world_currency': self.payoff.to_real_world_currency(self.session),
++        }
+ 
+ page_sequence = [
+     WaitForGrouping,
+-    InfoPage,
++    Chat,
+     PriceSetting,
+     ResultsWaitPage,
+     ResultsPage,
+     FinalPage,
+-]
+\ No newline at end of file
++]
+diff --git a/post_questionnaire/FinalPage.html b/post_questionnaire/FinalPage.html
+new file mode 100644
+index 0000000..8923f54
+--- /dev/null
++++ b/post_questionnaire/FinalPage.html
+@@ -0,0 +1,19 @@
++{% extends 'otree/Page.html' %}
++{% load otree static %}
++
++{% block title %}
++    Thank you!
++{% endblock %}
++
++{% block content %}
++
++    <p>
++        Thank you for your participation in our experiment!
++    </p>
++
++    <p>
++        In order to finish the survey, you need to return to the Prolific platform.
++        Please follow the link: <a href="">[TBD]</a>
++    </p>
++
++{% endblock %}
+diff --git a/post_questionnaire/PostExterimentQuestionnaire1.html b/post_questionnaire/PostExterimentQuestionnaire1.html
+new file mode 100644
+index 0000000..1e3852f
+--- /dev/null
++++ b/post_questionnaire/PostExterimentQuestionnaire1.html
+@@ -0,0 +1,114 @@
++{% extends 'otree/Page.html' %}
++{% load otree static %}
++
++{% block title %}
++    Post-Experimental Questionnaire Part 1
++{% endblock %}
++
++{% block content %}
++
++    <style>
++        td.numberColumn {
++            vertical-align: top;
++            padding-left: 2em;
++        }
++        td.questionColumn {
++            padding-left: 2em;
++            padding-bottom: 3em;
++        }
++    </style>
++
++    <p>
++        Before we conclude the experiment, we kindly ask you to complete the following questions.
++        Completing the questions is required for the receipt of your compensation.
++    </p>
++
++    <p>
++        Please think about how likely it is that you will behave in the way described in the three situations below.
++    </p>
++
++    <br>
++
++    <table>
++        <tr>
++            <td class="numberColumn">
++                I)
++            </td>
++            <td class="questionColumn">
++                <p>
++                    You and a group of college students worked very hard on a project. Your professor singles you out for a better grade than anyone else.
++                </p>
++
++                <p>
++                    <i>You would feel you should not accept it.</i>
++                </p>
++
++                <!-- Scale 1-5 (1: “not likely”; 5:  “very likely.”) -->
++
++                <p>
++                    Not likely &nbsp;
++                    {{ for choice in form.not_accepting_better_grade }}
++                        &nbsp; &nbsp; {{ choice }} &nbsp; &nbsp;
++                    {{ endfor }}
++                    &nbsp; Very likely
++                </p>
++
++            </td>
++        </tr>
++
++        <tr>
++            <td class="numberColumn">
++                II)
++            </td>
++            <td class="questionColumn">
++                <p>
++                    You are driving down the road, and you hit a small animal.
++                </p>
++
++                <p>
++                    <i>You’d feel bad you hadn’t been more alert driving down the road.</i>
++                </p>
++
++                <!-- Scale 1-5 (1: “not likely”; 5:  “very likely.”) -->
++
++                <p>
++                    Not likely &nbsp;
++                    {{ for choice in form.feeling_bad_about_not_being_more_alert }}
++                        &nbsp; &nbsp; {{ choice }} &nbsp; &nbsp;
++                    {{ endfor }}
++                    &nbsp; Very likely
++                </p>
++            </td>
++        </tr>
++
++        <tr>
++            <td class="numberColumn">
++                III)
++            </td>
++            <td class="questionColumn">
++                <p>
++                    You make a mistake at your student job and find out a coworker is blamed for the error.
++                </p>
++
++                <p>
++                    <i>You would feel unhappy and eager to correct the situation.</i>
++                </p>
++
++                <!-- Scale 1-5 (1: “not likely”; 5:  “very likely.”) -->
++
++                <p>
++                    Not likely &nbsp;
++                    {{ for choice in form.feeling_unhappy_about_coworker_being_blamed }}
++                        &nbsp; &nbsp; {{ choice }} &nbsp; &nbsp;
++                    {{ endfor }}
++                    &nbsp; Very likely
++                </p>
++            </td>
++        </tr>
++    </table>
++
++    <br>
++
++    {{ next_button }}
++
++{% endblock %}
+diff --git a/post_questionnaire/PostExterimentQuestionnaire2.html b/post_questionnaire/PostExterimentQuestionnaire2.html
+new file mode 100644
+index 0000000..86328e0
+--- /dev/null
++++ b/post_questionnaire/PostExterimentQuestionnaire2.html
+@@ -0,0 +1,169 @@
++{% extends 'otree/Page.html' %}
++{% load otree static %}
++
++{% block title %}
++    Post-Experimental Questionnaire Part 2
++{% endblock %}
++
++{% block content %}
++
++<style>
++    td.numberColumn {
++        padding-right: 2em;
++        vertical-align: top;
++    }
++    td.questionColumn {
++        vertical-align: top;
++        padding-bottom: 1em
++    }
++    td.leftOfMultiChoice {
++        text-align: right;
++        vertical-align: top;
++        padding-bottom: 3em;
++    }
++    td.rightOfMultiChoice {
++        text-align: left;
++        vertical-align: top;
++        padding-bottom: 3em;
++    }
++    td.multiChoice {
++        text-align: center;
++        vertical-align: top;
++        padding-bottom: 3em;
++    }
++
++</style>
++
++    <table>
++        <!-- First row -->
++        <tr>
++            <td class="numberColumn">
++                1.
++            </td>
++            <td class="questionColumn" colspan="3">
++                “Are you generally a person who is fully prepared to take risks, or do you try to avoid taking risks?”
++            </td>
++        </tr>
++        <tr>
++            <td>
++            </td>
++            <td class="leftOfMultiChoice">
++                Unwilling to take risks &nbsp;
++            </td>
++            <td class="multiChoice">
++                {{ for choice in form.willingness_to_take_risks }}
++                    &nbsp; {{ choice }} &nbsp;
++                {{ endfor }}
++            </td>
++            <td class="rightOfMultiChoice">
++                &nbsp; Fully prepared to take risks
++            </td>
++        </tr>
++
++        <!-- Second row -->
++        <tr>
++            <td class="numberColumn">
++                2.
++            </td>
++            <td class="questionColumn" colspan="3">
++                “How willing are you to give to good causes without expecting anything in return?”
++            </td>
++        </tr>
++        <tr>
++            <td>
++            </td>
++            <td class="leftOfMultiChoice">
++                Not at all willing &nbsp;
++            </td>
++            <td class="multiChoice">
++                {{ for choice in form.willingness_to_give_to_good_causes }}
++                    &nbsp; {{ choice }} &nbsp;
++                {{ endfor }}
++            </td>
++            <td class="rightOfMultiChoice">
++                &nbsp; Extremely willing
++            </td>
++        </tr>
++
++        <!-- Third row -->
++        <tr>
++            <td class="numberColumn">
++                3.
++            </td>
++            <td class="questionColumn" colspan="3">
++                “How competitive do you consider yourself to be?”
++            </td>
++        </tr>
++        <tr>
++            <td>
++            </td>
++            <td class="leftOfMultiChoice">
++                Not competitive at all &nbsp;
++            </td>
++            <td class="multiChoice">
++                {{ for choice in form.competitiveness }}
++                    &nbsp; {{ choice }} &nbsp;
++                {{ endfor }}
++            </td>
++            <td class="rightOfMultiChoice">
++                &nbsp; Very competitive
++            </td>
++        </tr>
++
++        <!-- Fourth row -->
++        <tr>
++            <td class="numberColumn">
++                4.
++            </td>
++            <td class="questionColumn" colspan="3">
++                How well does the following statement describe you as a person?<br/>
++                “As long as I am not convinced otherwise, I assume that people have only the best intentions.”
++            </td>
++        </tr>
++        <tr>
++            <td>
++            </td>
++            <td class="leftOfMultiChoice">
++                Does not describe me at all &nbsp;
++            </td>
++            <td class="multiChoice">
++                {{ for choice in form.assuming_best_intentions }}
++                    &nbsp; {{ choice }} &nbsp;
++                {{ endfor }}
++            </td>
++            <td class="rightOfMultiChoice">
++                &nbsp; Describes me perfectly
++            </td>
++        </tr>
++
++        <!-- Fifth row -->
++        <tr>
++            <td class="numberColumn">
++                5.
++            </td>
++            <td class="questionColumn" colspan="3">
++                You confide an intimate secret to a close friend, asking him/her not to tell anyone.
++                Shortly afterward, you realize that he/she has told it to another acquaintance. How betrayed do you feel?
++            </td>
++        </tr>
++        <tr>
++            <td>
++            </td>
++            <td class="leftOfMultiChoice">
++                Not at all betrayed &nbsp;
++            </td>
++            <td class="multiChoice">
++                {{ for choice in form.feeling_betrayed }}
++                    &nbsp; {{ choice }} &nbsp;
++                {{ endfor }}
++            </td>
++            <td class="rightOfMultiChoice">
++                &nbsp; Extremely betrayed
++            </td>
++        </tr>
++
++    </table>
++
++    {{ next_button }}
++
++{% endblock %}
+diff --git a/post_questionnaire/__init__.py b/post_questionnaire/__init__.py
+new file mode 100644
+index 0000000..864dab8
+--- /dev/null
++++ b/post_questionnaire/__init__.py
+@@ -0,0 +1,93 @@
++from otree.api import (
++    models,
++    widgets,
++    BaseConstants,
++    BaseSubsession,
++    BaseGroup,
++    BasePlayer,
++    Currency as c,
++    currency_range,
++    Page,  # Add this import
++    WaitPage,  # Add this import
++)
++
++author = 'Your Name'
++
++doc = """
++Your experiment description
++"""
++
++class Constants(BaseConstants):
++    name_in_url = 'post_questionnaire'
++    players_per_group = 3
++    num_rounds = 1
++    num_consumers = 6
++    consumer_endowment = c(100)
++    exchange_rate = 1500
++
++class Subsession(BaseSubsession):
++    pass
++
++class Group(BaseGroup):
++    pass
++
++class Player(BasePlayer):
++    not_accepting_better_grade = models.IntegerField(
++        choices=[1, 2, 3, 4, 5],
++        widget=widgets.RadioSelectHorizontal,
++    )
++    feeling_bad_about_not_being_more_alert = models.IntegerField(
++        choices=[1, 2, 3, 4, 5],
++        widget=widgets.RadioSelectHorizontal,
++    )
++    feeling_unhappy_about_coworker_being_blamed = models.IntegerField(
++        choices=[1, 2, 3, 4, 5],
++        widget=widgets.RadioSelectHorizontal,
++    )
++    willingness_to_take_risks = models.IntegerField(
++        choices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
++        widget=widgets.RadioSelectHorizontal,
++    )
++    willingness_to_give_to_good_causes = models.IntegerField(
++        choices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
++        widget=widgets.RadioSelectHorizontal,
++    )
++    competitiveness = models.IntegerField(
++        choices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
++        widget=widgets.RadioSelectHorizontal,
++    )
++    assuming_best_intentions = models.IntegerField(
++        choices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
++        widget=widgets.RadioSelectHorizontal,
++    )
++    feeling_betrayed = models.IntegerField(
++        choices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
++        widget=widgets.RadioSelectHorizontal,
++    )
++
++class PostExterimentQuestionnaire1(Page):
++    form_model = 'player'
++    form_fields = [
++        'not_accepting_better_grade',
++        'feeling_bad_about_not_being_more_alert',
++        'feeling_unhappy_about_coworker_being_blamed'
++    ]
++
++class PostExterimentQuestionnaire2(Page):
++    form_model = 'player'
++    form_fields = [
++        'willingness_to_take_risks',
++        'willingness_to_give_to_good_causes',
++        'competitiveness',
++        'assuming_best_intentions',
++        'feeling_betrayed'
++    ]
++
++class FinalPage(Page):
++    pass
++
++page_sequence = [
++    PostExterimentQuestionnaire1,
++    PostExterimentQuestionnaire2,
++    FinalPage,
++]
+diff --git a/settings.py b/settings.py
+index 3dfd339..1dbc9f8 100644
+--- a/settings.py
++++ b/settings.py
+@@ -11,7 +11,7 @@ SESSION_CONFIGS = [
+         'name': 'T1_Chat',
+         'display_name': 'T1_Chat',
+         'num_demo_participants': 18,
+-        'app_sequence': ['my_app'],
++        'app_sequence': ['introduction', 'my_app', 'post_questionnaire'],
+     },
+ ]
+ 
+@@ -21,10 +21,10 @@ SESSION_CONFIGS = [
+ # e.g. self.session.config['participation_fee']
+ 
+ SESSION_CONFIG_DEFAULTS = dict(
+-    real_world_currency_per_point=1.00, participation_fee=0.00, doc=""
++    real_world_currency_per_point=0.0006691297208538588, participation_fee=2.00, doc=""
+ )
+ 
+-PARTICIPANT_FIELDS = []
++PARTICIPANT_FIELDS = ['gender', 'age', 'education']
+ SESSION_FIELDS = []
+ 
+ # ISO-639 code
+@@ -32,7 +32,7 @@ SESSION_FIELDS = []
+ LANGUAGE_CODE = 'en'
+ 
+ # e.g. EUR, GBP, CNY, JPY
+-REAL_WORLD_CURRENCY_CODE = 'USD'
++REAL_WORLD_CURRENCY_CODE = 'GBP'
+ USE_POINTS = True
+ 
+ ADMIN_USERNAME = 'admin'

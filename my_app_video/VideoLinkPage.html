@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% block content %}
+    <h3>Join the Video Communication Room</h3>
+    <p>Please click the following link to join the video communication room:</p>
+    <p>
+        <a href="{{ video_link }}" target="_blank">{{ video_link }}</a>
+    </p>
+    {% if not video_link %}
+        <p style="color: red;">Error: Video link not found. Please check the assignment in the subsession.</p>
+    {% endif %}
+    <p>Debug Info: Group ID {{ group.id_in_subsession }}, Video Link: {{ video_link }}</p>
+    <br>
+    <input type="checkbox" id="confirm_checkbox"> I have joined the video communication room
+    <br><br>
+    <button id="next_button" disabled onclick="submitForm()">Next</button>
+
+    <script>
+        document.getElementById('confirm_checkbox').addEventListener('change', function() {
+            document.getElementById('next_button').disabled = !this.checked;
+        });
+
+        function submitForm() {
+            document.forms[0].submit();
+        }
+    </script>
+{% endblock %}
